@@ -1,0 +1,21 @@
+--- ivy/ivy.xml.orig	2014-06-09 19:49:30.280385707 +0000
++++ ivy/ivy.xml	2014-06-09 20:24:07.973383296 +0000
+@@ -32,7 +32,7 @@
+   </publications>
+ 
+   <dependencies>
+-    <dependency org="org.elasticsearch" name="elasticsearch" rev="0.19.4" 
++    <dependency org="org.elasticsearch" name="elasticsearch" rev="1.1.1" 
+                 conf="*->default"/>
+   
+     <dependency org="org.apache.solr" name="solr-solrj" rev="3.4.0"
+@@ -111,9 +111,7 @@
+     <dependency org="mysql" name="mysql-connector-java" rev="5.1.18" conf="*->default"/> 
+     -->
+     <!-- Uncomment this to use HBase as Gora backend. -->
+-    <!-- 
+     <dependency org="org.apache.gora" name="gora-hbase" rev="0.3" conf="*->default" />
+-    -->
+     <!-- Uncomment this to use Accumulo as Gora backend. -->
+     <!-- 
+     <dependency org="org.apache.gora" name="gora-accumulo" rev="0.3" conf="*->default" />

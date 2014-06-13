@@ -1,0 +1,11 @@
+--- src/java/org/apache/nutch/indexer/elastic/ElasticWriter.java.orig	2014-06-09 19:48:24.008385551 +0000
++++ src/java/org/apache/nutch/indexer/elastic/ElasticWriter.java	2014-06-09 19:48:40.792385600 +0000
+@@ -101,7 +101,7 @@
+       BulkResponse actionGet = execute.actionGet();
+       if (actionGet.hasFailures()) {
+         for (BulkItemResponse item : actionGet) {
+-          if (item.failed()) {
++          if (item.isFailed()) {
+             throw new RuntimeException("First failure in bulk: "
+                 + item.getFailureMessage());
+           }

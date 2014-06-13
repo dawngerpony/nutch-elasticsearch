@@ -117,17 +117,17 @@ Troubleshooting
 
 ### ClusterBlockException
 
-[vagrant@localhost local]$ bin/nutch elasticindex elasticsearch -all
-Exception in thread "elasticsearch[Caiera][generic][T#2]" org.elasticsearch.cluster.block.ClusterBlockException: blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];[SERVICE_UNAVAILABLE/2/no master];
-    at org.elasticsearch.cluster.block.ClusterBlocks.globalBlockedException(ClusterBlocks.java:138)
-    at org.elasticsearch.cluster.block.ClusterBlocks.globalBlockedRaiseException(ClusterBlocks.java:128)
-    at org.elasticsearch.action.bulk.TransportBulkAction.executeBulk(TransportBulkAction.java:197)
-    at org.elasticsearch.action.bulk.TransportBulkAction.access$000(TransportBulkAction.java:65)
-    at org.elasticsearch.action.bulk.TransportBulkAction$1.onFailure(TransportBulkAction.java:143)
-    at org.elasticsearch.action.support.TransportAction$ThreadedActionListener$2.run(TransportAction.java:117)
-    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-    at java.lang.Thread.run(Thread.java:744)
+    [vagrant@localhost local]$ bin/nutch elasticindex elasticsearch -all
+    Exception in thread "elasticsearch[Caiera][generic][T#2]" org.elasticsearch.cluster.block.ClusterBlockException: blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];[SERVICE_UNAVAILABLE/2/no master];
+        at org.elasticsearch.cluster.block.ClusterBlocks.globalBlockedException(ClusterBlocks.java:138)
+        at org.elasticsearch.cluster.block.ClusterBlocks.globalBlockedRaiseException(ClusterBlocks.java:128)
+        at org.elasticsearch.action.bulk.TransportBulkAction.executeBulk(TransportBulkAction.java:197)
+        at org.elasticsearch.action.bulk.TransportBulkAction.access$000(TransportBulkAction.java:65)
+        at org.elasticsearch.action.bulk.TransportBulkAction$1.onFailure(TransportBulkAction.java:143)
+        at org.elasticsearch.action.support.TransportAction$ThreadedActionListener$2.run(TransportAction.java:117)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:744)
 
 Check the following:
 * Your elasticsearch configuration is correct.
