@@ -132,6 +132,7 @@ Troubleshooting
 Check the following:
 * Your elasticsearch configuration is correct.
 * Your firewall is disabled:
+* Your elasticsearch server is using multicast.
 
         sudo service iptables stop
         sudo chkconfig iptables off
